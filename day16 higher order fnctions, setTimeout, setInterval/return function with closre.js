@@ -25,5 +25,6 @@ function f1() {
     return f2;
 }
 
+
 const printName = f1()
 printName()
