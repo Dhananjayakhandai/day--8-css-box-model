@@ -24,3 +24,5 @@ const person = {
 
 console.log(person.lastName)
 person.lastName = "sahoo"
+
+//person = {} //error => as person is declared  with const
