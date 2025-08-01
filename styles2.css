@@ -6,7 +6,7 @@ div {
     background-color: violet;
     width: 50vw;
     height: 50vh;
-    padding: 5vw;
+    padding: 5vw; 
     border: 1vw solid red;
     font-size: 2em;
 }
