@@ -169,3 +169,5 @@ console.log(issomeevens)
 //every()
 let isEveryOdds =numbers.every(num =>num % 2 !==0)
 console.log(isEveryOdds)
+
+//find()
