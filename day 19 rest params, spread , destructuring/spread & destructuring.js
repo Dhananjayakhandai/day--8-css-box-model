@@ -40,11 +40,25 @@ console.log(arr4)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const user = {
     name:'Rakesh Das',
-    age:24
+    age:24,
+    address:{
+        state: 'odisha',
+        pin: 764832
+    }
 }
 
 const copiedUser = {...user, city: 'BBSR'}
 
 // Object.assign()
+// console.log(user)
+// console.log(copiedUser)
+
+
+const copyUser = {...user}
+copyUser.address.state = "jkd"
 console.log(user)
-console.log(copiedUser)
+console.log(copyUser)
+//shalow cloning
+//json.parse(), json.stringify()
+
+//////////////////////////////////////destrcturing in js///////////////////////////////////////////////////////////////
