@@ -1,10 +1,10 @@
 const students =['raj', 'amit', 'ajit', 'ankit']
 
-for (let i = 0; i < students.length; i++) {
-    console.log(students[i]);
-}
+// for (let i = 0; i < students.length; i++) {
+//     console.log(students[i]);
+// }
 
-console.log('============================================================================')
+// console.log('============================================================================')
 
 // for(const students of students){
 //     console.log(students)
@@ -30,11 +30,11 @@ const person = {
 //     console.log(key, typeof key, person.key[key])
 // }
 
-const personkeys = object.keys(person)
-console.log(personkeys)
-for (const key of personkeys) {
-    console.log(person[key])
-}
+// const personkeys = object.keys(person)
+// console.log(personkeys)
+// for (const key of personkeys) {
+//     console.log(person[key])
+// }
 
 const personvalues = object.values(person)
 console.log(personvalues)
