@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .highlight {
+            background-color: yellowgreen;
+        }
+
+        .highlight:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" id="mainConatiner">
+        <p id="firstParagraph">This is the firstParagraph</p>
+    </div>
+    <div class="parent">
+        <div class="sibilings1">sibilings 1</div>
+        <div class="sibilings2">sibilings 2</div>
+    </div>
+
+    <script>
+        const container = document.createElement('.container')
+
+        const newParagraph = document.createElement('p')
+        newParagraph.innerText = "this is dynimically created paragraph"
+        newParagraph.id = 'dynamic-paragraph'
+        newParagraph.style.color = 'red'
+        newParagraph.classList.add = 'highlight'
+        container.append(newParagraph)
+        // container.append(null)
+
+
+        //========================================remove()
+        const firstpara = document.querySelector('#firstparagraph')
+        firstpara.remove()
+        setTimeout(() => {
+            firstpara, remove()
+            // container.remove()
+            // document.body.remove()
+            //  document.remove()
+            // document.children[0].remove()
+            // document.children[1].remove()
+        }), 3000
+
+        //===============================insertAdjacentElementHtml, insertAdjacentElement,  insertAdjacentText
+        //closest()
+    </script>
+</body>
+
+</html>
