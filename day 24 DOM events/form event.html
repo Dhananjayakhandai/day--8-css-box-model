@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Events</title>
     <style>
-        form{
+        form {
             border: 2px solid red;
             padding: 10px;
         }
     </style>
 </head>
+
 <body>
     <form action="/form-submit">
-        <input type="text" placeholder="enter username">
-        <button >Submit</button>
+        <input type="text" placeholder="enter username" name="username">
+        <br> <br>
+        <label>
+            choose an ice cream flavor
+            <select class="ice-cream" name="flavor">
+                <option value="">Select One...</option>
+                <option value="butterscotch">buttrscotch</option>
+                <option value="chocolate">chocolate</option>
+                <option value="vanila">vanila</option>
+            </select>
+        </label>
+        <br> <br>
+        <button>Submit</button>
     </form>
     <script>
         const form = document.querySelector('form')
 
         // form.addEventListener('event', (e) =>{
-        //     e.preventDefault()
+        //     e.preventDefault() //it is used for stop the form submition 
 
         //     // console.log("submit event occured")
         //     // console.log(e)
@@ -32,13 +45,50 @@
 
         //==================================================================================================
         const input = document.querySelector("input")
-        input.addEventListener("focus", ()=>{
+        input.addEventListener("focus", () => {
             console.log("focus in input field")
         })
 
-        input.addEventListener("blur", ()=>{
+        input.addEventListener("blur", () => {
             console.log("focus removed from input field")
         })
+
+        input.addEventListener("input", () => {
+            // console.log("focus removed from input field")
+            console.log(e.target.value)
+        })
+
+        input.addEventListener("blur", () => {
+            console.log("focus removed from input field")
+            console.log(e.target.value)
+        })
+
+        //------------------------------------- 14.08.2025 - change event, input event -------------------------------------------------------------
+        const selectElement = document.querySelector('.ice-cream')
+        selectElement.addEventListener('change', (e) => {
+            console.log("change event occured")
+            // console.log(e)
+            console.log(e.type, e.target.value)
+        })
+
+        const inp = document.querySelector('input')
+        inp.addEventListener('change', (e)=>{
+            console.log("change event occured in the input")
+            console.log(e)
+        })
+        const Form = document.querySelector('form')
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault()
+
+            const formData = new formData(form)
+            console.log('formData', formData)
+
+            for (const [key, value] of formData.entries){
+                console.log(`${key} :${value}`)
+            }
+        })
+
     </script>
 </body>
+
 </html>
